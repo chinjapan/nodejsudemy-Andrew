@@ -1,5 +1,5 @@
-var request=require('request');
-var url ='http:/ipinfo.io';
+var request = require('request');
+var url ='http://ipinfo.io';
 
 
 // module.export to create function
@@ -17,5 +17,11 @@ module.exports = function(callback) {
                 callback(body);
             }
     });
+    request(
+        url, 
+        function(error, res, body) {
+        callback(JSON.parse(body))
+    });
+
 };
  

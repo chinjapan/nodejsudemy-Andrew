@@ -11,7 +11,7 @@ module.exports = function(callback){
         } else {
             //console.log(JSON.stringify(body,null,4));
             // It's 77.77 in London
-             callback('It¥ ' + body.main.temp + ' in ' + body.name +'!')
+             callback('It is  ' + body.main.temp + ' in ' + body.name +'!')
         }
     });
 }
